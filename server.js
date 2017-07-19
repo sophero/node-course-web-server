@@ -25,9 +25,9 @@ app.use((req, res, next) => {
 });
 
 // Note lack of next() call in this middleware - means that client request will not be able to execute. If we had used next after the render, it still wouldn't be able to execute
-app.use((req, res, next) => {
-    res.render('maintenance.hbs');
-});
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs');
+// });
 
 // Static public directory - no need to route all your html files! Nice.
 app.use(express.static(__dirname + '/public'));
